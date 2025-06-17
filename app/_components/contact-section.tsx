@@ -79,8 +79,7 @@ const ContactSection = () => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    ...formData,
-                    to: "harikrishnanwebpage@gmail.com"
+                    ...formData
                 }),
             });
 
