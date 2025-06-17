@@ -6,8 +6,14 @@ const Education = () => {
             <div className="flex h-[40vh] flex-col mt-12 w-[75%]">
                 <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">Education</h2>
                 <div className="flex gap-y-4 mt-6 p-4">
-                    <div className="relative w-[100px] h-[75px] rounded-lg overflow-hidden bg-neutral-900">
-                        <Image src="/images/mkce.jpg" alt="MKCE" fill />
+                    <div className="relative w-[60px] h-[60px] rounded-lg overflow-hidden bg-neutral-900 shadow-lg">
+                        <Image
+                            src="/images/mkce-rounded.jpg"
+                            alt="MKCE" 
+                            fill 
+                            className="object-cover hover:scale-105 transition-transform duration-300"
+                            sizes="(max-width: 768px) 60px, 60px"
+                        />
                     </div>
                     <div className="flex flex-col gap-y-2 w-full rounded-lg px-4">
                         <h2 className="text-lg md:text-xl text-black dark:text-white max-w-4xl">M.Kumarasamy College of Engineering</h2>

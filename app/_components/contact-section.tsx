@@ -1,15 +1,114 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { Textarea } from "@/components/ui/textarea";
+import { toast } from "sonner";
+
+interface FormData {
+    firstname: string;
+    lastname: string;
+    company: string;
+    phone: string;
+    email: string;
+    message: string;
+}
 
 const ContactSection = () => {
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        console.log("Form submitted");
+    const [formData, setFormData] = useState<FormData>({
+        firstname: "",
+        lastname: "",
+        company: "",
+        phone: "",
+        email: "",
+        message: ""
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { id, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [id]: value
+        }));
     };
+
+    const validateForm = () => {
+        const errors: string[] = [];
+        
+        if (!formData.firstname.trim()) {
+            errors.push("First name is required");
+        }
+        
+        if (!formData.email.trim()) {
+            errors.push("Email is required");
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+            errors.push("Invalid email format");
+        }
+        
+        if (!formData.message.trim()) {
+            errors.push("Message is required");
+        }
+
+        if (formData.phone && !/^\+?[\d\s-]{10,}$/.test(formData.phone)) {
+            errors.push("Invalid phone number format");
+        }
+
+        return errors;
+    };
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        
+        const errors = validateForm();
+        if (errors.length > 0) {
+            errors.forEach(error => 
+                toast.error(error, {
+                    description: "Please fix the error and try again."
+                })
+            );
+            return;
+        }
+
+        setIsSubmitting(true);
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    to: "harikrishnanwebpage@gmail.com"
+                }),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to send message');
+            }
+
+            toast.success("Message sent successfully!", {
+                description: "Thank you for contacting me."
+            });
+            
+            setFormData({
+                firstname: "",
+                lastname: "",
+                company: "",
+                phone: "",
+                email: "",
+                message: ""
+            });
+        } catch (error) {
+            toast.error("Failed to send message", {
+                description: "Please try again later."
+            });
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <div className="flex h-full w-full flex-col items-center gap-y-8 mt-8">
             <div className="flex h-[100vh] flex-col w-[75%]">
@@ -19,48 +118,95 @@ const ContactSection = () => {
                         <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
                             <LabelInputContainer>
                                 <Label htmlFor="firstname">First name <span className="text-red-500">*</span></Label>
-                                <Input id="firstname" placeholder="First name" type="text" required />
+                                <Input 
+                                    id="firstname" 
+                                    placeholder="First name" 
+                                    type="text" 
+                                    value={formData.firstname}
+                                    onChange={handleChange}
+                                    required 
+                                />
                             </LabelInputContainer>
                             <LabelInputContainer>
                                 <Label htmlFor="lastname">Last name</Label>
-                                <Input id="lastname" placeholder="Last name" type="text" />
+                                <Input 
+                                    id="lastname" 
+                                    placeholder="Last name" 
+                                    type="text"
+                                    value={formData.lastname}
+                                    onChange={handleChange}
+                                />
                             </LabelInputContainer>
                         </div>
                         <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
                             <LabelInputContainer className="mb-4">
                                 <Label htmlFor="company">Company</Label>
-                                <Input id="company" placeholder="Company" type="text" />
+                                <Input 
+                                    id="company" 
+                                    placeholder="Company" 
+                                    type="text"
+                                    value={formData.company}
+                                    onChange={handleChange}
+                                />
                             </LabelInputContainer>
                             <LabelInputContainer className="mb-4">
                                 <Label htmlFor="phone">Phone</Label>
-                                <Input id="phone" placeholder="Phone" type="text" />
+                                <Input 
+                                    id="phone" 
+                                    placeholder="Phone" 
+                                    type="tel"
+                                    value={formData.phone}
+                                    onChange={handleChange}
+                                />
                             </LabelInputContainer>
                         </div>
                         <LabelInputContainer className="mb-4">
                             <Label htmlFor="email">Email Address <span className="text-red-500">*</span></Label>
-                            <Input id="email" placeholder="Email" type="email" required />
+                            <Input 
+                                id="email" 
+                                placeholder="Email" 
+                                type="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required 
+                            />
                         </LabelInputContainer>
                         <LabelInputContainer className="mb-4">
                             <Label htmlFor="message">Message <span className="text-red-500">*</span></Label>
-                            <Textarea id="message" placeholder="Message" rows={4} required />
+                            <Textarea 
+                                id="message" 
+                                placeholder="Message" 
+                                rows={4}
+                                value={formData.message}
+                                onChange={handleChange}
+                                required 
+                            />
                         </LabelInputContainer>
 
                         <div className="flex gap-x-2">
                             <button
                                 className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
-                                type="submit"
+                                type="button"
+                                onClick={() => setFormData({
+                                    firstname: "",
+                                    lastname: "",
+                                    company: "",
+                                    phone: "",
+                                    email: "",
+                                    message: ""
+                                })}
                             >
                                 Cancel
                                 <BottomGradient />
                             </button>
                             <button
-                                className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
+                                className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset] disabled:opacity-50"
                                 type="submit"
+                                disabled={isSubmitting}
                             >
-                                Send &rarr;
+                                {isSubmitting ? 'Sending...' : 'Send →'}
                                 <BottomGradient />
                             </button>
-
                         </div>
                         <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
 

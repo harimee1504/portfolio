@@ -55,6 +55,7 @@ export const BentoGridItem = ({
             <Badge
               variant="secondary"
               className="text-white bg-blue-600 hover:bg-blue-700"
+              key={tag}
             >
               {tag}
             </Badge>
