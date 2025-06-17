@@ -26,21 +26,23 @@ const ContactSection = () => {
                                 <Input id="lastname" placeholder="Last name" type="text" />
                             </LabelInputContainer>
                         </div>
-                        <LabelInputContainer className="mb-4">
-                            <Label htmlFor="company">Company</Label>
-                            <Input id="company" placeholder="Company" type="text" />
-                        </LabelInputContainer>
-                        <LabelInputContainer className="mb-4">
-                            <Label htmlFor="phone">Phone</Label>
-                            <Input id="phone" placeholder="Phone" type="text" />
-                        </LabelInputContainer>
+                        <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
+                            <LabelInputContainer className="mb-4">
+                                <Label htmlFor="company">Company</Label>
+                                <Input id="company" placeholder="Company" type="text" />
+                            </LabelInputContainer>
+                            <LabelInputContainer className="mb-4">
+                                <Label htmlFor="phone">Phone</Label>
+                                <Input id="phone" placeholder="Phone" type="text" />
+                            </LabelInputContainer>
+                        </div>
                         <LabelInputContainer className="mb-4">
                             <Label htmlFor="email">Email Address <span className="text-red-500">*</span></Label>
                             <Input id="email" placeholder="Email" type="email" required />
                         </LabelInputContainer>
                         <LabelInputContainer className="mb-4">
                             <Label htmlFor="message">Message <span className="text-red-500">*</span></Label>
-                            <Textarea id="message" placeholder="Message" required />
+                            <Textarea id="message" placeholder="Message" rows={4} required />
                         </LabelInputContainer>
 
                         <div className="flex gap-x-2">
