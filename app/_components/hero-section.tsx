@@ -28,7 +28,7 @@ const LinkedInComponent = () => {
                         </div>
                     </div>
                 </TooltipTrigger>
-                <TooltipContent className="bg-blue-600 text-white border-blue-500">
+                <TooltipContent className="bg-blue-600 text-white border-blue-500 mb-4">
                     <p>Connect on LinkedIn</p>
                 </TooltipContent>
             </Tooltip>
@@ -91,7 +91,7 @@ const GitHubComponent = () => {
                         </div>
                     </div>
                 </TooltipTrigger>
-                <TooltipContent className="bg-gray-800 text-white border-gray-600">
+                <TooltipContent className="bg-gray-800 text-white border-gray-600 mb-4">
                     <p>View GitHub Profile</p>
                 </TooltipContent>
             </Tooltip>
@@ -101,44 +101,46 @@ const GitHubComponent = () => {
 
 const HeroSection = () => {
     return (
-        <HeroHighlight>
-            <motion.h1
-                initial={{
-                    opacity: 0,
-                    y: 20,
-                }}
-                animate={{
-                    opacity: 1,
-                    y: [20, -5, 0],
-                }}
-                transition={{
-                    duration: 0.5,
-                    ease: [0.4, 0.0, 0.2, 1],
-                }}
-                className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
-            >
-                <Highlight className="text-white">
-                    Hello, I'm Harikrishnan Prasannam
-                </Highlight>
-            </motion.h1>
-            <motion.h2 
-                initial={{ opacity: 0, y: 20 }}
+        <div id="home" className="h-screen w-full">
+            <HeroHighlight>
+                <motion.h1
+                    initial={{
+                        opacity: 0,
+                        y: 20,
+                    }}
+                    animate={{
+                        opacity: 1,
+                        y: [20, -5, 0],
+                    }}
+                    transition={{
+                        duration: 0.5,
+                        ease: [0.4, 0.0, 0.2, 1],
+                    }}
+                    className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
+                >
+                    <Highlight className="text-white">
+                        Hello, I'm Harikrishnan Prasannam
+                    </Highlight>
+                </motion.h1>
+                <motion.h2 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="mt-3 text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl text-center mx-auto"
+                >
+                    Full Stack Developer with over 4 years of experience in software development
+                </motion.h2>
+                <motion.div 
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="mt-3 text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl text-center mx-auto"
-            >
-                Full Stack Developer with over 4 years of experience in software development
-            </motion.h2>
-            <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-row items-center justify-center mt-6 gap-x-4">
-                <CvComponent />
-                <LinkedInComponent />
-                <GitHubComponent />
-            </motion.div>
-        </HeroHighlight>
+                className="flex flex-row items-center justify-center mt-6 gap-x-4">
+                    <CvComponent />
+                    <LinkedInComponent />
+                    <GitHubComponent />
+                </motion.div>
+            </HeroHighlight>
+        </div>
     );
 }
 

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 const Education = () => {
     return (
         <motion.div 
+            id="education"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

@@ -111,6 +111,7 @@ const ContactSection = () => {
 
     return (
         <motion.div 
+            id="contact"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

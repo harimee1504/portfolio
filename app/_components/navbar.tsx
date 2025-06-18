@@ -6,7 +6,7 @@ export const links = [
     icon: (
       <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "#",
+    href: "#home",
   },
 
   {
@@ -14,27 +14,27 @@ export const links = [
     icon: (
       <IconBriefcase className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "#",
+    href: "#experience",
   },
   {
     title: "Projects",
     icon: (
       <IconCode className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "#",
+    href: "#projects",
   },
   {
     title: "Education",
     icon: (
       <IconSchool className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "#",
+    href: "#education",
   },
   {
     title: "Contact",
     icon: (
       <IconAddressBook className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "#",
+    href: "#contact",
   }
 ];
