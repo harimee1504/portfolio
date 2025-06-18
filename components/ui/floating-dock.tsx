@@ -13,12 +13,24 @@ import { useRef, useState } from "react";
 
 // Smooth scrolling function
 const scrollToSection = (sectionId: string) => {
-  const element = document.getElementById(sectionId);
-  if (element) {
-    element.scrollIntoView({
+  if (sectionId === 'home') {
+    // For home section, scroll to top
+    window.history.pushState(null, '', '#home');
+    window.scrollTo({
+      top: 0,
       behavior: "smooth",
-      block: "start",
     });
+  } else {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      // Update URL hash without triggering a page reload
+      window.history.pushState(null, '', `#${sectionId}`);
+      
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   }
 };
 

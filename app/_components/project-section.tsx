@@ -93,9 +93,9 @@ const ProjectSection = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="flex w-[75%] mb-6"
+                className="flex w-[75%] mt-6"
             >
-                <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">Projects</h2>
+                <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl pt-6">Projects</h2>
             </motion.div>
             <BentoGrid className="max-w-[75%] mx-auto md:auto-rows-[20rem]">
                 {items.map((item, i) => (
