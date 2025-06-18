@@ -5,6 +5,14 @@ import { Toaster } from "@/components/ui/sonner";
 export const metadata: Metadata = {
   title: "Harikrishnan's Portfolio",
   description: "Harikrishnan's Portfolio Website built with Next.js",
+  icons: {
+    icon: [
+      {
+        url: "/icon-small.png",
+        href: "/icon-small.png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
