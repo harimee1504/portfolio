@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge"
-import { BadgeCheckIcon } from "lucide-react";
+import { BadgeCheckIcon, ExternalLink } from "lucide-react";
+
 export const BentoGrid = ({
   className,
   children,
@@ -27,6 +28,7 @@ export const BentoGridItem = ({
   header,
   tags,
   icon,
+  url,
 }: {
   className?: string;
   title?: string | React.ReactNode;
@@ -34,6 +36,7 @@ export const BentoGridItem = ({
   header?: React.ReactNode;
   tags?: string[];
   icon?: React.ReactNode;
+  url?: string;
 }) => {
   return (
     <div
@@ -44,8 +47,17 @@ export const BentoGridItem = ({
     >
       {header}
       <div className="transition duration-200 group-hover/bento:translate-x-2">
-        <div className="mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200">
+        <div className="mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200 flex justify-between items-center">
           {title}
+          {url && (
+            <button
+              onClick={() => window.open(url, '_blank', 'noopener,noreferrer')}
+              className="p-1 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors duration-200"
+              title="Open in new tab"
+            >
+              <ExternalLink className="h-4 w-4 text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300" />
+            </button>
+          )}
         </div>
         <div className="font-sans text-xs font-normal text-neutral-600 dark:text-neutral-300">
           {description}

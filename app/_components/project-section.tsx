@@ -18,8 +18,7 @@ const ProjectSection = () => {
             header: <img src="https://ui.aceternity.com/logo.png" alt="Todo Note App" className="w-full h-[60%] object-fill" />,
             className: "md:col-span-2",
             icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
-            tags: ["Next.js", "Clerk", "Microfrontend"],
-            url: "https://auth-wrapper-beta-indol.vercel.app"
+            tags: ["Next.js", "Clerk", "Microfrontend"]
         },
         {
             title: "Todo Note App",
@@ -107,6 +106,7 @@ const ProjectSection = () => {
                         className={item.className}
                         icon={item.icon}
                         tags={item.tags}
+                        url={item.url}
                     />
                 ))}
             </BentoGrid>
