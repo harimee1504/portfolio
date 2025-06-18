@@ -50,7 +50,7 @@ export const BentoGridItem = ({
         <div className="font-sans text-xs font-normal text-neutral-600 dark:text-neutral-300">
           {description}
         </div>
-        <div className="flex mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200 gap-1">
+        <div className="flex flex-wrap mt-2 mb-2 font-sans font-bold text-neutral-600 dark:text-neutral-200 gap-1">
           {tags?.map((tag) => (
             <Badge
               variant="secondary"
