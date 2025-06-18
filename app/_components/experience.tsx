@@ -12,27 +12,31 @@ const Experience = () => {
             Senior Software Engineer
           </p>
           <div className="mb-8">
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅  Developed advanced features in a Knowledge Graph, including node
-              filtering, dependency creation, visual path tracing between related
-              nodes, and identification of missing dependencies, enhancing data
-              visualization and analysis
+            <div className="flex items-start gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              <span className="mt-0.5">✅</span>
+              <span>Developed advanced features in a <strong>Knowledge Graph</strong>, including <strong>node
+              filtering</strong>, <strong>dependency creation</strong>, <strong>visual path tracing</strong> between related
+              nodes, and identification of <strong>missing dependencies</strong>, enhancing data
+              visualization and analysis</span>
             </div>
-            <div className="flex mt-2 items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅  Built a documentation generation feature leveraging application
-              source code and a static workflow engine, enabling automated
-              documentation through configurable prompt and non-prompt
-              based steps
+            <div className="flex items-start gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300 mt-2">
+              <span className="mt-0.5">✅</span>
+              <span>Built a <strong>documentation generation feature</strong> leveraging application
+              source code and a <strong>static workflow engine</strong>, enabling automated
+              documentation through configurable <strong>prompt and non-prompt
+              based steps</strong></span>
             </div>
-            <div className="flex mt-2 items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅   Conducted a Proof of Concept (POC) to fine-tune a Large Language
-              Model (LLM) with domain-specific datasets, demonstrating a 30%
-              improvement in response accuracy and contextual relevance
+            <div className="flex items-start gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300 mt-2">
+              <span className="mt-0.5">✅</span>
+              <span>Conducted a <strong>Proof of Concept (POC)</strong> to fine-tune a <strong>Large Language
+              Model (LLM)</strong> with domain-specific datasets, demonstrating a <strong>30%
+              improvement</strong> in response accuracy and contextual relevance</span>
             </div>
-            <div className="flex mt-2 items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅   Collaborated directly with clients to implement custom add-on
-              features and modify existing functionality to meet specific business
-              requirements and use cases
+            <div className="flex items-start gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300 mt-2">
+              <span className="mt-0.5">✅</span>
+              <span>Collaborated directly with clients to implement <strong>custom add-on
+              features</strong> and modify existing functionality to meet specific business
+              requirements and use cases</span>
             </div>
           </div>
         </div>
@@ -46,34 +50,39 @@ const Experience = () => {
             Software Engineer
           </p>
           <div className="mb-8">
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅   Implemented Micro Frontend (MFE) architecture using React,
+            <div className="flex items-start gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              <span className="mt-0.5">✅</span>
+              <span>Implemented <strong>Micro Frontend (MFE)</strong> architecture using <strong>React</strong>,
               modularizing a monolithic application into independently
-              deployable units, enabling parallel development across teams
+              deployable units, enabling parallel development across teams</span>
             </div>
-            <div className="flex mt-2 items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅  Led end-to-end transition from a monolithic architecture to Micro
-              Frontend (MFE) using React, deploying modular applications on AWS
-              and Azure with Docker, Kubernetes(Helm); owned the entire
-              DevOps lifecycle including boilerplate setup, Dockerfile creation,
-              CI/CD pipeline scripting, and Helm chart development
+            <div className="flex items-start gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300 mt-2">
+              <span className="mt-0.5">✅</span>
+              <span>Led end-to-end transition from a <strong>monolithic architecture</strong> to <strong>Micro
+              Frontend (MFE)</strong> using <strong>React</strong>, deploying modular applications on <strong>AWS
+              and Azure</strong> with <strong>Docker, Kubernetes(Helm)</strong>; owned the entire
+              <strong>DevOps lifecycle</strong> including boilerplate setup, Dockerfile creation,
+              <strong>CI/CD pipeline</strong> scripting, and Helm chart development</span>
             </div>
-            <div className="flex mt-2 items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅    Designed and architected a distributed worker system to process
-              time-intensive tasks concurrently using Redis, WebSockets, and
-              Kubernetes Jobs, significantly improving throughput and system
-              responsiveness
+            <div className="flex items-start gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300 mt-2">
+              <span className="mt-0.5">✅</span>
+              <span>Designed and architected a <strong>distributed worker system</strong> to process
+              time-intensive tasks concurrently using <strong>Redis, WebSockets, and
+              Kubernetes Jobs</strong>, significantly improving throughput and system
+              responsiveness</span>
             </div>
-            <div className="flex mt-2 items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅   Built and visualized a Knowledge Graph using D3.js to represent
-              complex relationships within Generative AI (GenAI) datasets,
-              facilitating deeper insights and data connectivity
+            <div className="flex items-start gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300 mt-2">
+              <span className="mt-0.5">✅</span>
+              <span>Built and visualized a <strong>Knowledge Graph</strong> using <strong>D3.js</strong> to represent
+              complex relationships within <strong>Generative AI (GenAI)</strong> datasets,
+              facilitating deeper insights and data connectivity</span>
             </div>
-            <div className="flex mt-2 items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅    Collaborated with the platform administration team to onboard
-              Micro Frontend (MFE) child applications into the centralized UI
+            <div className="flex items-start gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300 mt-2">
+              <span className="mt-0.5">✅</span>
+              <span>Collaborated with the platform administration team to onboard
+              <strong>Micro Frontend (MFE)</strong> child applications into the centralized UI
               framework, ensuring seamless integration and alignment with
-              organizational standards.
+              organizational standards.</span>
             </div>
           </div>
         </div>
@@ -87,27 +96,29 @@ const Experience = () => {
             Associate Software Engineer
           </p>
           <div className="mb-8">
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅  Developed advanced features in a Knowledge Graph, including node
-              filtering, dependency creation, visual path tracing between related
-              nodes, and identification of missing dependencies, enhancing data
-              visualization and analysis
+            <div className="flex items-start gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+              <span className="mt-0.5">✅</span>
+              <span>Designed and implemented a <strong>Python-based middleware
+              microservice</strong> to manage dynamic application configurations,
+              integrating securely with <strong>Vault providers</strong> for secrets management</span>
             </div>
-            <div className="flex mt-2 items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅  Built a documentation generation feature leveraging application
-              source code and a static workflow engine, enabling automated
-              documentation through configurable prompt and non-prompt
-              based steps
+            <div className="flex items-start gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300 mt-2">
+              <span className="mt-0.5">✅</span>
+              <span>Developed and enforced <strong>Role-Based Access Control (RBAC)</strong> for a
+              multi-tenant architecture using <strong>Keycloak</strong> as the identity and access
+              management <strong>(IAM)</strong> solution</span>
             </div>
-            <div className="flex mt-2 items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅   Conducted a Proof of Concept (POC) to fine-tune a Large Language
-              Model (LLM) with domain-specific datasets, demonstrating a 30%
-              improvement in response accuracy and contextual relevance
+            <div className="flex items-start gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300 mt-2">
+              <span className="mt-0.5">✅</span>
+              <span>Boosted <strong>API performance by 10x</strong> through advanced <strong>MongoDB
+              aggregation techniques</strong>, reducing response times and improving
+              scalability</span>
             </div>
-            <div className="flex mt-2 items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
-              ✅   Collaborated directly with clients to implement custom add-on
-              features and modify existing functionality to meet specific business
-              requirements and use cases
+            <div className="flex items-start gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300 mt-2">
+              <span className="mt-0.5">✅</span>
+              <span>Engineered a dynamic <strong>ETL solution</strong> using <strong>JMESPath</strong> and <strong>regex-
+              based pattern matching</strong>, enabling on the-fly data extraction and
+              transformation tailored to diverse input schemas</span>
             </div>
           </div>
         </div>
