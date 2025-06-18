@@ -1,5 +1,6 @@
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
+import { motion } from "framer-motion";
 
 const Experience = () => {
   const data = [
@@ -114,9 +115,22 @@ const Experience = () => {
     },
   ];
   return (
-    <div className="relative w-full overflow-clip">
-      <Timeline data={data} />
-    </div>
+    <motion.div 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="relative w-full overflow-clip"
+    >
+      <motion.div
+        initial={{ x: -50, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        <Timeline data={data} />
+      </motion.div>
+    </motion.div>
   );
 }
 

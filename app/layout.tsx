@@ -23,9 +23,11 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`antialiased`}
+        className={`antialiased transition-all duration-300 ease-in-out`}
       >
-        {children}
+        <div className="transition-opacity duration-300 ease-in-out">
+          {children}
+        </div>
         <Toaster />
       </body>
     </html>

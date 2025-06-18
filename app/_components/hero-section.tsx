@@ -101,15 +101,24 @@ const HeroSection = () => {
                 <Highlight className="text-white">
                     Hello, I'm Harikrishnan Prasannam
                 </Highlight>
-                <p className="text-[2rem] mt-3">
-                    Full Stack Developer with over 4 years of experience in software development
-                </p>
-                <div className="flex flex-row items-center justify-center mt-6 gap-x-4">
-                    <CvComponent />
-                    <LinkedInComponent />
-                    <GitHubComponent />
-                </div>
             </motion.h1>
+            <motion.h2 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="mt-3 text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl text-center mx-auto"
+            >
+                Full Stack Developer with over 4 years of experience in software development
+            </motion.h2>
+            <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex flex-row items-center justify-center mt-6 gap-x-4">
+                <CvComponent />
+                <LinkedInComponent />
+                <GitHubComponent />
+            </motion.div>
         </HeroHighlight>
     );
 }

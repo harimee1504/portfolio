@@ -5,6 +5,7 @@ import {
     IconSignature,
     IconTableColumn,
 } from "@tabler/icons-react";
+import { motion } from "framer-motion";
 
 const ProjectSection = () => {
     const Skeleton = () => (
@@ -79,10 +80,22 @@ const ProjectSection = () => {
         },
     ];
     return (
-        <div className="flex h-full w-full flex-col items-center gap-y-8 mt-16">
-            <div className="flex w-[75%] mb-6">
+        <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex h-full w-full flex-col items-center gap-y-8 mt-16"
+        >
+            <motion.div 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="flex w-[75%] mb-6"
+            >
                 <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">Projects</h2>
-            </div>
+            </motion.div>
             <BentoGrid className="max-w-[75%] mx-auto md:auto-rows-[20rem]">
                 {items.map((item, i) => (
                     <BentoGridItem
@@ -96,7 +109,7 @@ const ProjectSection = () => {
                     />
                 ))}
             </BentoGrid>
-        </div>
+        </motion.div>
     );
 }
 
