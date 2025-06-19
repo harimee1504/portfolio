@@ -24,7 +24,8 @@ const ProjectSection = () => {
             header: <img src="/images/authlayout.png" alt="Todo Note App" className="w-full h-[65%] object-fill" />,
             className: "md:col-span-2",
             icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
-            tags: ["Next.js", "Clerk", "Microfrontend"]
+            tags: ["Next.js", "Clerk", "Microfrontend"],
+            url: "https://github.com/harimee1504/auth-layout"
         },
         {
             title: "The File Store",
