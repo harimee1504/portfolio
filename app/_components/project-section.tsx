@@ -1,4 +1,5 @@
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+import { StickyBanner } from "@/components/ui/sticky-banner";
 import {
     IconClipboardCopy,
     IconFileBroken,
@@ -7,10 +8,15 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 
+const StickyBannerComponent = () => {
+    return (<StickyBanner className="h-full max-w-[75%] mx-auto md:auto-rows-[20rem] bg-gradient-to-r from-indigo-300 to-purple-300  dark:from-indigo-500 dark:to-purple-500">
+        <p className="mx-0 max-w-[90%] text-white drop-shadow-md">
+            Please use the following credentials for all listed projects: 1) username: alex, password: alex 2) username: bob, password: bob
+        </p>
+    </StickyBanner>);
+}
+
 const ProjectSection = () => {
-    const Skeleton = () => (
-        <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
-    );
     const items = [
         {
             title: "Auth Wrapper",
@@ -96,6 +102,7 @@ const ProjectSection = () => {
             >
                 <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl pt-6">Projects</h2>
             </motion.div>
+            <StickyBannerComponent />
             <BentoGrid className="max-w-[75%] mx-auto md:auto-rows-[20rem]">
                 {items.map((item, i) => (
                     <BentoGridItem
