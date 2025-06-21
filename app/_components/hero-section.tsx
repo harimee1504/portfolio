@@ -127,9 +127,9 @@ const HeroSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="mt-3 text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl text-center mx-auto"
+                    className="mt-3 text-md md:text-3xl mb-4 text-black dark:text-white max-w-4xl text-center mx-auto"
                 >
-                    Full Stack Developer with over 4 years of experience in software development
+                    Fullstack Developer with 4 years of hands-on experience building web applications that perform and impress
                 </motion.h2>
                 <motion.div 
                 initial={{ opacity: 0, y: 30 }}
