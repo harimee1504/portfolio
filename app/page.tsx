@@ -70,7 +70,7 @@ export function Home() {
       <ProjectSection />
       <Education />
       <ContactSection />
-      <div className="fixed top-[90%]">
+      <div className="fixed top-[90%] right-4 md:right-auto md:left-1/2 md:-translate-x-1/2 z-50">
         <FloatingDock
           items={links}
         />
