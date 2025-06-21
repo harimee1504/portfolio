@@ -7,6 +7,7 @@ import ProjectSection from "./_components/project-section";
 import Experience from "./_components/experience";
 import Education from "./_components/education";
 import ContactSection from "./_components/contact-section";
+import Skills from "./_components/skills";
 
 // Custom hook for hash-based navigation
 const useHashNavigation = () => {
@@ -66,6 +67,7 @@ export function Home() {
       <div className="flex flex-col items-center justify-center h-screen w-full">
       <HeroSection />
       </div>
+      <Skills />
       <Experience />
       <ProjectSection />
       <Education />

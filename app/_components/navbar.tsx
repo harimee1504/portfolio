@@ -1,4 +1,4 @@
-import { IconHome, IconBriefcase, IconCode, IconSchool, IconAddressBook } from "@tabler/icons-react";
+import { IconHome, IconBriefcase, IconCode, IconSchool, IconAddressBook, IconTools } from "@tabler/icons-react";
 
 export const links = [
   {
@@ -8,7 +8,13 @@ export const links = [
     ),
     href: "#home",
   },
-
+  {
+    title: "Skills",
+    icon: (
+      <IconTools className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    ),
+    href: "#skills",
+  },
   {
     title: "Experience",
     icon: (
