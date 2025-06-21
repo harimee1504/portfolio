@@ -60,9 +60,9 @@ const Experience = () => {
               <span className="mt-0.5">✅</span>
               <span>Led end-to-end transition from a <strong>monolithic architecture</strong> to <strong>Micro
               Frontend (MFE)</strong> using <strong>React</strong>, deploying modular applications on <strong>AWS
-              and Azure</strong> with <strong>Docker, Kubernetes(Helm)</strong>; owned the entire
-              <strong>DevOps lifecycle</strong> including boilerplate setup, Dockerfile creation,
-              <strong>CI/CD pipeline</strong> scripting, and Helm chart development</span>
+              and Azure</strong> with <strong>Docker, Kubernetes(Helm)</strong>; owned the entire 
+              <strong> DevOps lifecycle</strong> including boilerplate setup, Dockerfile creation,
+              <strong> CI/CD pipeline</strong> scripting, and Helm chart development</span>
             </div>
             <div className="flex items-start gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300 mt-2">
               <span className="mt-0.5">✅</span>
@@ -80,7 +80,7 @@ const Experience = () => {
             <div className="flex items-start gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300 mt-2">
               <span className="mt-0.5">✅</span>
               <span>Collaborated with the platform administration team to onboard
-              <strong>Micro Frontend (MFE)</strong> child applications into the centralized UI
+              <strong> Micro Frontend (MFE)</strong> child applications into the centralized UI
               framework, ensuring seamless integration and alignment with
               organizational standards.</span>
             </div>

@@ -25,7 +25,7 @@ const ProjectSection = () => {
             className: "md:col-span-2",
             icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
             tags: ["Next.js", "Clerk", "Microfrontend"],
-            url: "https://github.com/harimee1504/auth-layout"
+            githubUrl: "https://github.com/harimee1504/auth-layout"
         },
         {
             title: "The File Store",
@@ -34,7 +34,8 @@ const ProjectSection = () => {
             className: "md:col-span-1",
             icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
             tags: ["Next.js", "Convex", "Microfrontend"],
-            url: "https://file-store-chi.vercel.app"
+            url: "https://file-store-chi.vercel.app",
+            githubUrl: "https://github.com/harimee1504/file-store"
         },
         {
             title: "Deployment Monitor",
@@ -44,7 +45,7 @@ const ProjectSection = () => {
             className: "md:col-span-1",
             icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
             tags: ["React(Template)", "SQLite", "Django", "Microfrontend"],
-            url: "https://github.com/harimee1504/cluster"
+            githubUrl: "https://github.com/harimee1504/cluster"
         },
         {
             title: "Canvas",
@@ -53,7 +54,8 @@ const ProjectSection = () => {
             className: "md:col-span-2",
             icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
             tags: ["Next.js", "Convex", "LiveBlocks", "Microfrontend"],
-            url: "https://canvas-pi-blush.vercel.app/canvas"
+            url: "https://canvas-pi-blush.vercel.app/canvas",
+            githubUrl: "https://github.com/harimee1504/canvas"
         },
         {
             title: "Sprint Board",
@@ -63,7 +65,8 @@ const ProjectSection = () => {
             className: "md:col-span-2",
             icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
             tags: ["Vue", "Python", "Flask", "MySQL", "GraphQL", "Microfrontend"],
-            url: "https://board-beta-indol.vercel.app"
+            url: "https://board-beta-indol.vercel.app",
+            githubUrl: "https://github.com/harimee1504?tab=repositories&q=board&type=&language=&sort="
         },
         {
             title: "Todo Note App",
@@ -72,7 +75,8 @@ const ProjectSection = () => {
             className: "md:col-span-1",
             icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
             tags: ["React", "Express", "MySQL", "Microfrontend"],
-            url: "https://todo-note-seven.vercel.app"
+            url: "https://todo-note-seven.vercel.app",
+            githubUrl: "https://github.com/harimee1504?tab=repositories&q=todo&type=&language=&sort="
         },
         {
             title: "Portfolio Website (Old Version)",
@@ -115,6 +119,7 @@ const ProjectSection = () => {
                         icon={item.icon}
                         tags={item.tags}
                         url={item.url}
+                        githubUrl={item.githubUrl}
                     />
                 ))}
             </BentoGrid>
